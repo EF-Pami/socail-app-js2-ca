@@ -60,18 +60,18 @@ function applyFilter() {
  * Search posts based on a query.
  */
 async function searchPosts() {
-    const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+    const searchIntem = document.getElementById('searchBar').value.toLowerCase();
     
-    if (!searchTerm) {
+    if (!searchIntem) {
         fetchAndDisplayPosts();
         return;
     }
 
     try {
         const allPosts = fetchAllPosts();
-        const filteredPosts = allPosts.filter(post =>
-            post.title.toLowerCase().includes(searchTerm) ||
-            post.body.toLowerCase().includes(searchTerm)
+        const filteredPosts = allPosts.filter(posts =>
+            posts.title.toLowerCase().includes(searchIntem) ||
+            posts.body.toLowerCase().includes(searchIntem)
         );
         
         displayPosts(filteredPosts); 
