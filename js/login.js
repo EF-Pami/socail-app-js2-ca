@@ -1,5 +1,5 @@
 import { API_BASE_URL } from "./routes.js";
-//const API_BASE_URL = `https://api.noroff.dev`;
+
 
 
 function saveUserData(accessToken) {
