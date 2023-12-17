@@ -1,0 +1,35 @@
+{
+  "name": "socail-app-js2-ca",
+  "version": "1.0.0",
+  "description": "js2 ca",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css",
+    "dev": "npm run watch & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EF-Pami/socail-app-js2-ca.git"
+  },
+  "keywords": [
+    "js2",
+    "sass",
+    "scss",
+    "bootstrap"
+  ],
+  "author": "EF Pami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EF-Pami/socail-app-js2-ca/issues"
+  },
+  "homepage": "https://github.com/EF-Pami/socail-app-js2-ca#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}

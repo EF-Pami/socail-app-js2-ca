@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/index.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>singlepost/ Climate Care</title>
+</head>
+<body>
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="index.html">CLIMATE CARE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="index.html" class="nav-link active text-black" aria-current="page">HOME</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="index.html" class="nav-link text-black">POST</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="./profile/login/index.html" class="nav-link text-black">LOGIN</a>
+                </li>
+              </ul>
+              <form class="d-flex" id="searchForm">
+                <input class="form-control me-2" type="search" id="searchBar" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary btn-sm" type="submit">Search</button>
+              </form>                
+                <a href="./index.html" class="text-decoration-none">
+                    <span>Sign out</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div id="singlePostContainer" class="container mt-5 bg-light p-3">
+                    <button onclick="editPostFunction()" class="btn btn-primary mb-4">Edit</button>
+                    <button onclick="deletePostFunction()" class="btn btn-danger mb-4">Delete</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editPostModalLabel">Edit Post</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="editPostTitle" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="editPostTitle">
+                  </div>
+                  <div class="mb-3">
+                      <label for="editPostBody" class="form-label">Body</label>
+                      <textarea class="form-control" id="editPostBody" rows="3"></textarea>
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="submitEdit()">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center text-white">
+        Copyright &copy; Design and Developed by EF II PAMI
+    </footer>
+
+    <script type="module" src="../js/posts/singlepost.js"></script>
+</body>
+</html>
